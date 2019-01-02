@@ -1,0 +1,33 @@
+{
+  "name": "node-typescript-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts:node": "ts-node src/index.ts",
+    "dev": "nodemon",
+    "build": "tsc && npm run html",
+    "html": "find ./src -name '*.hbs' -o -name '*.css' -type f -exec cp --parents {} ./build \\;",
+    "clean": "rm -rf build",
+    "start": "node build/src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-handlebars": "0.0.30",
+    "@types/mongoose": "^5.3.5",
+    "copyfiles": "^2.1.0",
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.0"
+  }
+}
